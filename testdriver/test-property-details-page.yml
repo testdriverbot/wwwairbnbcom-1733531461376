@@ -1,0 +1,16 @@
+version: 4.1.29
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Click on a property image or title.
+    commands:
+      - command: hover-text
+        text: Rockbridge, Ohio
+        description: property title for Rockbridge, Ohio
+        action: click
+  - prompt: >-
+      Assert that the property details page loads without errors.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: Pond Slider Studio Cabin•Firepit•Hot tub•Lakefront is visible
