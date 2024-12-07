@@ -1,0 +1,20 @@
+version: 4.1.29
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: hover-text
+        text: Search destinations
+        description: search input field in the Airbnb page
+        action: click
+  - prompt: Click on the "Experiences" tab.
+    commands:
+      - command: hover-text
+        text: Experiences
+        description: experiences tab in the Airbnb navigation bar
+        action: click
+  - prompt: >-
+      Assert that the Experiences section is displayed correctly.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the Experiences section is displayed with listings
