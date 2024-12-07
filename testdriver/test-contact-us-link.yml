@@ -1,0 +1,9 @@
+version: 4.1.29
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Scroll until the "Contact Us" link is visible.
+    commands:
+      - command: scroll-until-text
+        text: Contact Us
+        direction: down
